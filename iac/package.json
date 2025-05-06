@@ -1,0 +1,26 @@
+{
+  "name": "iac",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "check": "npm run check:type && npm run check:lint && npm run check:format",
+    "check:lint": "biome lint .",
+    "check:format": "biome format .",
+    "check:type": "tsc --noEmit",
+    "fix": "biome check . --unsafe --write"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.14",
+    "aws-cdk": "^2.1013.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apprunner-alpha": "^2.194.0-alpha.0",
+    "aws-cdk-lib": "^2.194.0",
+    "constructs": "^10.4.2",
+    "source-map-support": "^0.5.21"
+  }
+}
